@@ -15,10 +15,22 @@ const makeGrid = function(rows, cols) {
   }
 }
 
+const clearGrid = function(parent) {
+while(parent.firstChild) {
+  parent.removeChild(parent.firstChild)
+}
+
+}
+
 resetButton.addEventListener('click', function() {
   for(let item of gridItems) {
     item.classList.remove("hovered");
   }
+  let response = prompt("How many squares in a row would you like your next game to be?");
+  clearGrid(container);
+  makeGrid(response, response)
+  
+
 })
 
 
