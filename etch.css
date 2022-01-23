@@ -3,6 +3,18 @@
   --grid-rows: 1;
 
 }
+.btn-container {
+  margin: 70px;
+  display: flex;
+  justify-content: center;
+}
+#reset-btn {
+  width: 150px;
+  height: 50px;
+  text-transform: uppercase;
+
+
+}
 
 #container {
   display: grid;
@@ -16,5 +28,9 @@
   padding: 1em;
   border: 1px solid black;
   text-align: center;
-  
+
+}
+
+.hovered {
+  background-color: black;;
 }
