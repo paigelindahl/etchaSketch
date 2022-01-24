@@ -22,14 +22,24 @@ while(parent.firstChild) {
 
 }
 
+const promptInput = function() {
+  let response = prompt("How many squares in a row would you like your next game to be? (max 100)");
+  if (response > 100) {
+    alert("Please choose a number less than 100")
+    promptInput();
+  } else {
+    clearGrid(container);
+    makeGrid(response, response)
+    
+  }
+
+}
+
 resetButton.addEventListener('click', function() {
   for(let item of gridItems) {
     item.classList.remove("hovered");
   }
-  let response = prompt("How many squares in a row would you like your next game to be?");
-  clearGrid(container);
-  makeGrid(response, response)
-  
+  promptInput();
 
 })
 
